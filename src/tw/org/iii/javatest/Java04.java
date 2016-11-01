@@ -1,5 +1,5 @@
 package tw.org.iii.javatest;
-public class Jave04 {
+public class Java04 {
     public static void main(String[] args){
         double Score = Math.random();
         System.out.println(Score);
