@@ -38,9 +38,9 @@ public class PokeV3 {
                         "9","10","J","Q","K"};
 
         for (int[] player : players) {
-            Arrays.sort(player);
+            Arrays.sort(player);   // 排序
             for (int card : player) {
-                System.out.print(suits[card/13] + values[card%13] + " ");
+                System.out.print(suits[card/13] + values[card%13] + " "); //花色判定
             }
             System.out.println();
         }
