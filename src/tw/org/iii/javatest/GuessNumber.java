@@ -9,7 +9,7 @@ public class GuessNumber {
 
         // 2. 開始猜
         boolean isWinner = false;
-        for(int i =0 ; i<10 ; i++) {
+        for(int i =0 ; i<3 ; i++) {
             String guess = JOptionPane.showInputDialog("輸入答案");
             // 3.校對
             String result = checkAB(answer, guess);
