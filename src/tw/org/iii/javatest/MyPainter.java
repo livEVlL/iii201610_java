@@ -2,6 +2,8 @@ package tw.org.iii.javatest;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MyPainter extends JFrame {
     private JButton clear, undo,redo;
@@ -18,6 +20,28 @@ public class MyPainter extends JFrame {
 
         myPanel = new MyPanel();             // 新增建構無傳參數式
         add(myPanel,BorderLayout.CENTER);  //放置中央
+
+        clear.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myPanel.clear();
+            }
+        });
+
+        undo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myPanel.undo();
+            }
+        });
+
+        redo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myPanel.redo();
+            }
+        });
+
 
         setSize(640,480);
         setVisible(true);
